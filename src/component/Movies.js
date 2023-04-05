@@ -23,6 +23,7 @@ const Movies = () => {
 
   return (
     <div className='flex'>
+      <h1>All Movies</h1>
       {users.map((user, i) => {
         console.log(user)
         return (
