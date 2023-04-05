@@ -22,20 +22,23 @@ const Movies = () => {
   }, []);
 
   return (
-    <div className='flex'>
+    <>
       <h1>All Movies</h1>
-      {users.map((user, i) => {
-        console.log(user)
-        return (
-          <Link to={`/details/${user.show.id}`} state={user.show}>
-            <div className='movie-container' key={i}>
-              <img src={user.show.image?.medium} alt='' />
-              <p>{user.show.name}</p>
-            </div>
-          </Link>
-        )
-      })}
-    </div>
+      <div className='flex'>
+
+        {users.map((user, i) => {
+          console.log(user)
+          return (
+            <Link to={`/details/${user.show.id}`} state={user.show}>
+              <div className='movie-container' key={i}>
+                <img src={user.show.image?.medium} alt='' />
+                <p>{user.show.name}</p>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+    </>
   )
 
 }
